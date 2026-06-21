@@ -71,6 +71,12 @@
       "iconName": "x.square.fill",
       "urlScheme": "https://x.com/search?q={query}",
       "order": 11
+    },
+    {
+      "name": "豆包",
+      "iconName": "message",
+      "urlScheme": "doubao://search?q={query}",
+      "order": 12
     }
   ]
 }
