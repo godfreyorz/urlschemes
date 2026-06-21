@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: godfreyorz/URLScheme # 例：zhangsan/search-source-admin
+  repo: godfreyorz/urlschemes # 例：zhangsan/search-source-admin
   branch: main
   # 二选一：直接提交 / 自动生成PR
   squash_merges: false
