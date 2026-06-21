@@ -1,0 +1,7 @@
+/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+  Access-Control-Allow-Headers: Content-Type,Authorization
+
+/admin/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com; img-src 'self' data:;
