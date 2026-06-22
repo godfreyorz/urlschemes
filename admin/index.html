@@ -5,21 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>搜索源配置管理后台</title>
   <style>
-    /* 列表项交替背景色，方便区分 */
-    [class*="SortableListItem"]:nth-child(odd) {
-      background: rgba(0, 0, 0, 0.03) !important;
+    /*
+      每个搜索源有 4 个字段（平台名称、iconName、urlScheme、order）
+      PreviewContainer 内所有 WidgetPreviewContainer 按 4 个一组交替背景色
+      1-4 浅蓝, 5-8 白色, 9-12 浅蓝, 13-16 白色 ...
+    */
+    [class*="PreviewContainer"] > [class*="WidgetPreviewContainer"]:nth-child(8n+1),
+    [class*="PreviewContainer"] > [class*="WidgetPreviewContainer"]:nth-child(8n+2),
+    [class*="PreviewContainer"] > [class*="WidgetPreviewContainer"]:nth-child(8n+3),
+    [class*="PreviewContainer"] > [class*="WidgetPreviewContainer"]:nth-child(8n+4) {
+      background: rgba(59, 130, 246, 0.06) !important;
     }
-    [class*="SortableListItem"]:nth-child(even) {
+    [class*="PreviewContainer"] > [class*="WidgetPreviewContainer"]:nth-child(8n+5),
+    [class*="PreviewContainer"] > [class*="WidgetPreviewContainer"]:nth-child(8n+6),
+    [class*="PreviewContainer"] > [class*="WidgetPreviewContainer"]:nth-child(8n+7),
+    [class*="PreviewContainer"] > [class*="WidgetPreviewContainer"]:nth-child(8n) {
       background: transparent !important;
     }
-    [class*="SortableListItem"] {
-      border-bottom: 1px solid #e0e0e0 !important;
-      margin-bottom: 2px !important;
-    }
-    /* 列表项卡片样式 */
-    [class*="ListItem"] > [class*="Card"] {
-      box-shadow: none !important;
-      border: 1px solid #ddd !important;
+    /* 每组第1个字段（即每条的首字段）加上边框分隔 */
+    [class*="PreviewContainer"] > [class*="WidgetPreviewContainer"]:nth-child(4n+1) {
+      border-top: 2px solid #cbd5e1 !important;
+      padding-top: 8px !important;
+      margin-top: 4px !important;
     }
   </style>
 </head>
