@@ -4,6 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>搜索源配置管理后台</title>
+  <style>
+    /* 列表项交替背景色，方便区分 */
+    [class*="SortableListItem"]:nth-child(odd) {
+      background: rgba(0, 0, 0, 0.03) !important;
+    }
+    [class*="SortableListItem"]:nth-child(even) {
+      background: transparent !important;
+    }
+    [class*="SortableListItem"] {
+      border-bottom: 1px solid #e0e0e0 !important;
+      margin-bottom: 2px !important;
+    }
+    /* 列表项卡片样式 */
+    [class*="ListItem"] > [class*="Card"] {
+      box-shadow: none !important;
+      border: 1px solid #ddd !important;
+    }
+  </style>
 </head>
 <body>
   <!-- CMS自动挂载到该div -->
