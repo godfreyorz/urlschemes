@@ -87,7 +87,7 @@
     {
       "name": "抖音II",
       "iconName": "video",
-      "urlScheme": "snssdk1128//search?keyword={query}",
+      "urlScheme": "snssdk1128://search?keyword={query}",
       "order": 14
     }
   ]
